@@ -1,0 +1,11 @@
+{
+	"name": "NightCafe",
+	"version": "1.0.0",
+	"description": "Bot Nightcafe",
+	"main": "index.js",
+	"author": "Foxie",
+	"dependencies": {
+		"discord.js": "^12.2.0",
+		"moment": "^2.27.0"
+	}
+}
