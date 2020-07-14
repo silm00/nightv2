@@ -292,6 +292,8 @@ client.on('message', message => {
     let status = member.presence.status;
     
         
+        if(message.mentions.users.size){
+            let member=message.mentions.users.first()
         if(member){
             const emb=new Discord.MessageEmbed()
             .setColor('#ff9248')
