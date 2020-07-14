@@ -16,7 +16,7 @@ const activities_list = [
     "Creator Foxie",
     "Jaga Kesehetan", 
     //"PODCAST KAMIS 21.00 WIB",
-    "PODCAST RABU 20.00 WIB"
+    "PODCAST JUMAT 20.00 WIB"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 client.on('ready', () => {
