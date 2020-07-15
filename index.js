@@ -14,7 +14,7 @@ const PREFIX = 'nc!';
 const activities_list = [
     "OFFICIAL BOT Night Cafe", 
     "Creator Foxie",
-    "Jaga Kesehetan", 
+    "Jaga Kesehatan", 
     //"PODCAST KAMIS 21.00 WIB",
     "PODCAST RABU 20.00 WIB"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
