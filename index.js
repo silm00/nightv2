@@ -337,7 +337,21 @@ client.on('message', message => {
 });
 
 
+//help
+client.on('message', message => {
+  if(message.content.startsWith('nc!help')){
 
+const exampleEmbed = new Discord.MessageEmbed()
+  .setColor('#0099ff')
+  .setTitle('Help Command')
+  .setDescription('You can use command,```nc!ping, nc!userinfo, nc!myavatar``` ')
+  .setFooter('Bot Created By Foxie', 'https://media.discordapp.net/attachments/721013672431845489/722923521164050462/22-225874_coffee-logo-png-vector-cafe.png');
+
+message.reply(exampleEmbed);
+
+
+};
+});
 
 
 
