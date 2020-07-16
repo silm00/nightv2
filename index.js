@@ -36,11 +36,19 @@ client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
   const channel = member.guild.channels.cache.find(ch => ch.id === '719212693860384880');
   // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
+  //if (!channel) return;
+    const exampleEmbed = new Discord.MessageEmbed()
+        .setColor('#0099ff')
+        .setTitle('Welcome')
+        .setDescription(`Hello new member!!!,
+  Welcome to the __**_Night Cafe Reborn_**__  ${member}`)
+        .setThumbnail('https://media.discordapp.net/attachments/721013672431845489/722923521164050462/22-225874_coffee-logo-png-vector-cafe.png')
+        .setFooter('Owner Coffeelake');
+
   // Send the message, mentioning the member
-  channel.send(`Welcome to the Night Cafe ${member}
- `);
-});
+  channel.send(exampleEmbed)
+
+ });
 
 
 
