@@ -15,7 +15,7 @@ const activities_list = [
     "OFFICIAL BOT Night Cafe", 
     "Creator Foxie",
     "Jaga Kesehatan", 
-    "Command nc!help"
+    "command nc!help",
     //"PODCAST KAMIS 21.00 WIB",
     "PODCAST RABU 20.00 WIB"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
