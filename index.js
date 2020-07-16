@@ -17,7 +17,7 @@ const activities_list = [
     "Jaga Kesehatan", 
     "command nc!help",
     //"PODCAST KAMIS 21.00 WIB",
-    "PODCAST RABU 20.00 WIB"
+    "Livestream Gaming JUMAT 20.00 WIB"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 client.on('ready', () => {
