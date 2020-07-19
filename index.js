@@ -137,7 +137,10 @@ client.on('message', message => {
         message.channel.send('haloh haloh');
 
     }
+if (message.content === '+bantu') {
+       message.author.send(" bisa donasi kesini kak makasih :))  kalo mau donate pulsa chat Foxie ya :)) https://cdn.discordapp.com/attachments/721950616397545493/731030442530177074/Screenshot_2020-07-10-13-13-39-28.jpg , https://cdn.discordapp.com/attachments/721950616397545493/731030110601347212/Screenshot_2020-07-10-13-12-14-66.jpg ");
 
+    }
   
 
 
