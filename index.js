@@ -16,8 +16,8 @@ const activities_list = [
     "Creator Foxie",
     "Jaga Kesehatan", 
     "command nc!help",
-    //"PODCAST KAMIS 21.00 WIB",
-    "Waiting for next event"
+    "PODCAST RABU 20.00 WIB"
+  //  "Waiting for next event"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 client.on('ready', () => {
