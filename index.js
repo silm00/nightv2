@@ -268,7 +268,7 @@ client.on('message', message=> {
     });
 
 client.on('message', message => {
-  if (message.content.startsWith("nc!say")) {
+  if (message.content.startsWith("nc$say")) {
       // Get the channel mention
       if (message.mentions.channels.size == 0) {
           message.reply("please mention a channel first.");
