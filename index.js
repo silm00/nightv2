@@ -35,7 +35,7 @@ client.user.setPresence({status: 'idle' })
 
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.cache.find(ch => ch.id === '719212693860384880');
+  const channel = member.guild.channels.cache.find(ch => ch.id === '730736365234421830');
   // Do nothing if the channel wasn't found on this server
   //if (!channel) return;
     const exampleEmbed = new Discord.MessageEmbed()
