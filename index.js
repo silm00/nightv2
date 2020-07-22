@@ -67,11 +67,6 @@ client.on('message', message => {
 
     }
 
-    if(message.content === "ayy") {
-   const ayy = client.emojis.find(emoji => emoji.name === "ayy");
-   message.reply(`${ayy} LMAO`);
-}
-
     if (message.content === 'Woy') {
         message.channel.send('kalem gan');
 
