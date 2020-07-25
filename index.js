@@ -354,6 +354,21 @@ message.reply(exampleEmbed);
 });
 
 
+client.on('message', message => {
+  if(message.content.startsWith('nc!serverinfo')){
+
+    const svembed = new Discord.MessageEmbed()
+    .setTitle(message.guild.name, message.guild.iconURL())
+    .setThumbnail(message.guild.iconURL())
+    .addField(`Owner` , message.guild.owner.user)
+    .addField('ID' , message.guild.id)
+    .addField(`Member`, message.guild.memberCount)
+    .addField(`Creation Date`,moment.utc(message.guild.createdAt).format("dddd , MMMM Do, YYYY "),true)
+
+    return message.channel.send(svembed);
+  }
+});
+
 
 //NzMwMjcxODg0MTE3MTQ3NjQ4.XwVE0A.WqM0Owv_y-GqWCp06slkdIUxH0Q
 
