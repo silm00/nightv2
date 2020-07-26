@@ -6,6 +6,7 @@ const client = new Discord.Client();
 const { Client, MessageEmbed } = require('discord.js');
 const { Permissions } = require('discord.js');
 const moment = require('moment');
+
 // this event will only trigger one time after logging in
 
 const PREFIX = 'nc!';
