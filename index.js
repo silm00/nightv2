@@ -363,7 +363,9 @@ client.on('message', message => {
     .addField(`Owner` , message.guild.owner.user)
     .addField('ID' , message.guild.id)
     .addField(`Member`, message.guild.memberCount)
-    .addField(`Creation Date`,moment.utc(message.guild.createdAt).format("dddd , MMMM Do, YYYY "),true)
+    .addField(`Total Channel` ,message.guild.channelCount ,)
+    .addField("Roles", message.guild.rolesCount,  inline=true)
+    .addField(`Server Created`,moment.utc(message.guild.createdAt).format("dddd , MMMM Do, YYYY "),true)
 
     return message.channel.send(svembed);
   }
