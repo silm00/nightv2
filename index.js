@@ -126,12 +126,16 @@ client.on('message', message => {
     }
 
     if (message.content === 'foxie') {
-        message.channel.send('haloh haloh');
+        message.channel.send('poksi punya nana');
+
+    }
+     if (message.content === 'poksi') {
+        message.channel.send('poksi punya nana');
 
     }
 
     if (message.content === 'Foxie') {
-        message.channel.send('haloh haloh');
+        message.channel.send('poksi punya nana');
 
     }
 if (message.content === '+bantu') {
