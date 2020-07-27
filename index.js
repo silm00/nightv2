@@ -134,6 +134,10 @@ client.on('message', message => {
 
     }
 
+    if (message.content === 'Poksi') {
+        message.channel.send('poksi punya nana');
+
+    }
     if (message.content === 'Foxie') {
         message.channel.send('poksi punya nana');
 
