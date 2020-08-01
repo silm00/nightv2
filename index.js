@@ -382,6 +382,27 @@ client.on('message', message => {
 
 });
 
+client.on('message', message => {
+  // Ignore messages that aren't from a guild
+  if (!message.guild) return;
+
+   if (message.content.startsWith("nc!kick")) {
+
+    if (!message.member.roles.cache.some(roles=> 'Admin','Owner'))
+        return;
+    // Easy way to get member object though mentions.
+    var member = message.mentions.members.first();
+    // Kick
+    member.kick().then((member) => {
+        // Successmessage
+        message.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
+    }).catch(() => {
+        // Failmessage
+        message.channel.send("Kamu gabisa nendang dia");
+    });
+}
+});
+
 //NzMwMjcxODg0MTE3MTQ3NjQ4.XwVE0A.WqM0Owv_y-GqWCp06slkdIUxH0Q
 
 // login to Discord with your app's token
