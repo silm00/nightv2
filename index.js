@@ -368,7 +368,7 @@ client.on('message', message => {
 
     const svembed = new Discord.MessageEmbed()
     .setTitle(message.guild.name, message.guild.iconURL())
-    .setThumbnail(message.guild.iconURL())
+    .setThumbnail(message.guild.iconURL().endswith(gif))
     .addField(`Owner` , message.guild.owner.user)
     .addField('ID' , message.guild.id)
     .addField(`Member`, message.guild.memberCount)
