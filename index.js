@@ -336,18 +336,45 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+  if (msg.member.hasPermission("BAN_MEMBERS")) {
+if (message.content.startsWith("$kick")) {
 
-client.on('message', message =>{
-  if (msg.member.hasPermission("KICK_MEMBERS") {
-    if (msg.members.mentions.first()) {
-        try {
-            msg.members.mentions.first().kick();
-        } catch {
-            msg.reply("I do not have permissions to kick " + msg.members.mentions.first());
-    }else {
-        msg.reply("You do not have permissions to kick " + msg.members.mentions.first());
+    if (!message.member.roles.find("name", "Admin"))
+        return;
+
+    // Easy way to get member object though mentions.
+    var member = message.mentions.members.first();
+    // Kick
+    member.kick().then((member) => {
+        // Successmessage
+        message.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
+    }).catch(() => {
+        // Failmessage
+        message.channel.send("Access Denied");
+    });
+}
 }
 });
+client.on("message", (message) => {
+    if (message.content.startsWith("$ban")) {
+
+        if (!message.member.roles.find("name", "Admin"))
+            return;
+
+        // Easy way to get member object though mentions.
+        var member = message.mentions.members.first();
+        // ban
+        member.ban().then((member) => {
+            // Successmessage
+            message.channel.send(":wave: " + member.displayName + " has been successfully banned https://gfycat.com/playfulfittingcaribou :point_right: ");
+        }).catch(() => {
+            // Failmessage
+            message.channel.send("Access Denied");
+        });
+    }
+});
+
 
 //NzMwMjcxODg0MTE3MTQ3NjQ4.XwVE0A.WqM0Owv_y-GqWCp06slkdIUxH0Q
 
