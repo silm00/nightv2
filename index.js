@@ -388,7 +388,7 @@ client.on('message', message => {
 
    if (message.content.startsWith("nc!kick")) {
 
-    if (!message.member.roles.cache.some(roles=> 'Admin','Owner'))
+    if (!message.member.roles.cache.some(roles=> roles.name === 'Admin','Owner'))
         return;
     // Easy way to get member object though mentions.
     var member = message.mentions.members.first();
