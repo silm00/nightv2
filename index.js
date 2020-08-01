@@ -341,8 +341,7 @@ client.on('message', message => {
   if (!message.guild) return;
 
   // If the message content starts with "!kick"
-  if (message.content.startsWith('nc!kick')) {
-    if(member.roles.cache.some(role => role.name === 'Admin','Owner')){
+  if (message.content.startsWith('nc!zxkick')) {
     // Assuming we mention someone in the message, this will return the user
     // Read more about mentions over at https://discord.js.org/#/docs/main/master/class/MessageMentions
     const user = message.mentions.users.first();
@@ -380,7 +379,7 @@ client.on('message', message => {
       message.reply("You didn't mention the user to kick!");
     }
   }
-}
+
 });
 
 //NzMwMjcxODg0MTE3MTQ3NjQ4.XwVE0A.WqM0Owv_y-GqWCp06slkdIUxH0Q
