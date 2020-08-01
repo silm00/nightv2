@@ -337,6 +337,18 @@ client.on('message', message => {
 });
 
 
+client.on('message', message =>{
+  if (msg.member.hasPermission("KICK_MEMBERS") {
+    if (msg.members.mentions.first()) {
+        try {
+            msg.members.mentions.first().kick();
+        } catch {
+            msg.reply("I do not have permissions to kick " + msg.members.mentions.first());
+    }else {
+        msg.reply("You do not have permissions to kick " + msg.members.mentions.first());
+}
+});
+
 //NzMwMjcxODg0MTE3MTQ3NjQ4.XwVE0A.WqM0Owv_y-GqWCp06slkdIUxH0Q
 
 // login to Discord with your app's token
