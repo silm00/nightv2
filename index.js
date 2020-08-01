@@ -344,10 +344,12 @@ if (message.content.startsWith(prefix + "kick")) {
     if (message.members.mentions.first()) {
         try {
             message.members.mentions.first().kick();
-        }} else {
+        }
+      } 
+    }else {
        message.channel.send("You do not have sufficient permissions to run this command!");
   }
-}
+
 }
 });
 
