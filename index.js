@@ -336,7 +336,23 @@ client.on('message', message => {
   }
 });
 
-
+client.on('message', message => {
+if (message.content.startsWith(prefix + "kick")) {
+   
+   // check if user has the role
+   if (msg.member.hasPermission("KICK_MEMBERS")) {
+    if (message.members.mentions.first()) {
+        try {
+            message.members.mentions.first().kick();
+        } catch {
+            message.reply("I do not have permissions to kick " + message.members.mentions.first());
+    }else {
+        message.reply("You do not have permissions to kick " + message.members.mentions.first());
+   }
+}
+}
+}
+});
 
 
 //NzMwMjcxODg0MTE3MTQ3NjQ4.XwVE0A.WqM0Owv_y-GqWCp06slkdIUxH0Q
