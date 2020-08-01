@@ -340,18 +340,16 @@ client.on('message', message => {
 if (message.content.startsWith(prefix + "kick")) {
    
    // check if user has the role
-   if (msg.member.hasPermission("KICK_MEMBERS")) {
+   if (message.member.roles.some(role => role.name === 'ADMIN')) {
     if (message.members.mentions.first()) {
         try {
             message.members.mentions.first().kick();
-        } catch {
-            message.reply("I do not have permissions to kick " + message.members.mentions.first());
-    }else {
-        message.reply("You do not have permissions to kick " + message.members.mentions.first());
-   }
-}
-}
-}
+        } else {
+       message.channel.send("You do not have sufficient permissions to run this command!");
+        }
+      }
+    }
+  }
 });
 
 
