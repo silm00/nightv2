@@ -411,7 +411,7 @@ client.on('message', function(message) {
             // use the message's channel (TextChannel) to send a new message
             message.channel.send("Mina desu")
             .catch(console.error); // add error handling here
-        }, 10 * 60 * 1000); 
+        },  60 * 1000); 
     }
 });
 
