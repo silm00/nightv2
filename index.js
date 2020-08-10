@@ -411,10 +411,21 @@ client.on('message', function(message) {
             // use the message's channel (TextChannel) to send a new message
             message.channel.send("Mina desu")
             .catch(console.error); // add error handling here
-        },  60 * 1000); 
+        }, 4 * 60 * 60 * 100); 
     }
 });
 
+
+client.on('message', function(message) {
+    // Now, you can use the message variable inside
+    if (message.content === "%loop1") { 
+        var interval = setInterval (function () {
+            // use the message's channel (TextChannel) to send a new message
+            message.channel.send("Mina")
+            .catch(console.error); // add error handling here
+        }, * 100); 
+    }
+});
 //NzMwMjcxODg0MTE3MTQ3NjQ4.XwVE0A.WqM0Owv_y-GqWCp06slkdIUxH0Q
 
 // login to Discord with your app's token
