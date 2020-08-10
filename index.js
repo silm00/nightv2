@@ -423,7 +423,7 @@ client.on('message', function(message) {
             // use the message's channel (TextChannel) to send a new message
             message.channel.send("Mina")
             .catch(console.error); // add error handling here
-        }, * 100); 
+        }, 1 * 1000); 
     }
 });
 //NzMwMjcxODg0MTE3MTQ3NjQ4.XwVE0A.WqM0Owv_y-GqWCp06slkdIUxH0Q
