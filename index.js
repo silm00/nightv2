@@ -403,6 +403,18 @@ client.on('message', message => {
 }
 });
 
+
+client.on('message', function(message) {
+    // Now, you can use the message variable inside
+    if (message.content === "%loop") { 
+        var interval = setInterval (function () {
+            // use the message's channel (TextChannel) to send a new message
+            message.channel.send("Mina desu")
+            .catch(console.error); // add error handling here
+        }, 10 * 60 * 1000); 
+    }
+});
+
 //NzMwMjcxODg0MTE3MTQ3NjQ4.XwVE0A.WqM0Owv_y-GqWCp06slkdIUxH0Q
 
 // login to Discord with your app's token
