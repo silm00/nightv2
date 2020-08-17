@@ -14,7 +14,7 @@ const PREFIX = 'nc!';
 
 const activities_list = [
     "OFFICIAL BOT Night Cafe", 
-    "Creator Foxie",
+    "Dirgahayu RI ke 75",
     "Jaga Kesehatan", 
     "command nc!help",
     "PODCAST RABU 20.00 WIB"
