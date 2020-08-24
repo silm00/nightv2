@@ -43,7 +43,7 @@ client.on('guildMemberAdd', member => {
         .setColor('#0099ff')
         .setTitle('Welcome')
         .setDescription(`Hello new member!!!,
-Welcome to __**_Night Cafe Reborn_**__  ${member}`)
+Welcome to __**_Night Cafe_**__  ${member}`)
         .setThumbnail('https://media.discordapp.net/attachments/721013672431845489/722923521164050462/22-225874_coffee-logo-png-vector-cafe.png')
         .setFooter('Owner Coffeelake');
 
