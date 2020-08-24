@@ -214,19 +214,12 @@ client.on('message', message=> {
   if (!channel) return;
   // Send the message, mentioning the member
   channel.send(`Halo @everyone, Jangan lupa hadir acara podcast kita nanti ya!!!, Jam 9 Wib ^^`);
+
+  message.delete()
 };
     });
 
 
-client.on('message', message=> {
-   if (message.content === 'cek2'){
-       const channel = message.guild.channels.cache.find(ch => ch.id === '719212693860384880');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`MINA SIAPA MINA`);
-};  9
-    });
 
 client.on('message', message => {
   if (message.content.startsWith("nc$say")) {
