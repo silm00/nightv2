@@ -204,7 +204,6 @@ client.on('message', message=> {
   // Send the message, mentioning the member
   channel.send(`Halo @ everyone, Jangan lupa hadir acara podcast kita nanti ya!!!, Jam 9 Wib ^^`);
 };
-message.delete();
     });
 
 //bot event remin
@@ -216,7 +215,7 @@ client.on('message', message=> {
   // Send the message, mentioning the member
   channel.send(`Halo @everyone, Jangan lupa hadir acara podcast kita nanti ya!!!, Jam 9 Wib ^^`);
 
-  message.delete()
+ 
 };
     });
 
