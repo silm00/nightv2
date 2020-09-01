@@ -204,7 +204,7 @@ client.on('message', message=> {
   // Send the message, mentioning the member
   channel.send(`Halo @ everyone, Jangan lupa hadir acara podcast kita nanti ya!!!, Jam 9 Wib ^^`);
 };
-message.content.delete();
+message.delete();
     });
 
 //bot event remin
