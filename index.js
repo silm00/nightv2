@@ -202,8 +202,9 @@ client.on('message', message=> {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(`Halo @everyone, Jangan lupa hadir acara podcast kita nanti ya!!!, Jam 9 Wib ^^`);
+  channel.send(`Halo @ everyone, Jangan lupa hadir acara podcast kita nanti ya!!!, Jam 9 Wib ^^`);
 };
+message.delete();
     });
 
 //bot event remin
