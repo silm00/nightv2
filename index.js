@@ -9,7 +9,7 @@ const moment = require('moment');
 const YouTube = require("simple-youtube-api");
 const ytdl = require("ytdl-core");
 require("dotenv").config();
-require("./server.js");
+
 
 
 // this event will only trigger one time after logging in
@@ -454,7 +454,7 @@ __**Command list**__
 > \`search\` > **\`search [title]\`**
 > \`skip\`, \`stop\`,  \`pause\`, \`resume\`
 > \`nowplaying\`, \`queue\`, \`volume\``)
-            .setFooter("©️Night Cafe", "https://api.zhycorp.xyz/assets/images/icon.jpg");
+            .setFooter("©️Night Cafe");
         message.channel.send(helpembed);
     }
     if (command === "nc!play" || command === "nc!p") {
