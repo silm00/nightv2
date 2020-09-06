@@ -430,8 +430,6 @@ client.on('message', function(message) {
 
 //music
 
-
-
 client.on("message", async (message) => { // eslint-disable-line
     if (message.author.client) return;
     if (!message.content.startsWith(PREFIX)) return;
@@ -441,8 +439,7 @@ client.on("message", async (message) => { // eslint-disable-line
     const url = args[1] ? args[1].replace(/<(.+)>/g, "$1") : "";
     const serverQueue = queue.get(message.guild.id);
 
-    let command = message.content.toLowerCase().split(" ")[0];
-    command = command.slice(PREFIX.length);
+  
 
     if (message.content === "nc!help" || message.content === "nc!cmd") {
         const helpembed = new MessageEmbed()
