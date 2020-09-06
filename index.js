@@ -444,7 +444,7 @@ client.on("message", async (message) => { // eslint-disable-line
     let command = message.content.toLowerCase().split(" ")[0];
     command = command.slice(PREFIX.length);
 
-    if (command === "help" || command === "cmd") {
+    if (message.content === "nc!help" || message.content === "nc!cmd") {
         const helpembed = new MessageEmbed()
             .setColor("BLUE")
             .setAuthor(client.user.tag, cient.user.displayAvatarURL())
