@@ -430,7 +430,7 @@ client.on('message', function(message) {
 
 //music
 
-client.on("message", async (message) => { // eslint-disable-line
+client.on('message', async (message) => { // eslint-disable-line
     if (message.author.client) return;
     if (!message.content.startsWith(PREFIX)) return;
 
