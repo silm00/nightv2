@@ -6,3 +6,4 @@ node_modules/
 
 # Other
 .github/'node_modules' 
+node_modules
