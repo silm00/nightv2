@@ -457,7 +457,7 @@ __**Command list**__
             .setFooter("©️Night Cafe", "https://api.zhycorp.xyz/assets/images/icon.jpg");
         message.channel.send(helpembed);
     }
-    if (command === "play" || command === "p") {
+    if (command === "nc!play" || command === "nc!p") {
         const voiceChannel = message.member.voice.channel;
         if (!voiceChannel) return message.channel.send({embed: {color: "RED", description: "I'm sorry, but you need to be in a voice channel to play a music!"}});
         const permissions = voiceChannel.permissionsFor(message.client.user);
@@ -495,7 +495,7 @@ __**Command list**__
             return handleVideo(video, message, voiceChannel);
         }
     }
-    if (command === "search" || command === "sc") {
+    if (command === "nc!search" || command === "nc!sc") {
         const voiceChannel = message.member.voice.channel;
         if (!voiceChannel) return message.channel.send({embed: {color: "RED", description: "I'm sorry, but you need to be in a voice channel to play a music!"}});
         const permissions = voiceChannel.permissionsFor(message.client.user);
@@ -557,13 +557,13 @@ __**Command list**__
             return handleVideo(video, message, voiceChannel);
         }
 
-    } else if (command === "skip") {
+    } else if (command === "nc!skip") {
         if (!message.member.voice.channel) return message.channel.send({embed: {color: "RED", description: "I'm sorry, but you need to be in a voice channel to skip a music!"}});
         if (!serverQueue) return message.channel.send({embed: {color: "RED", description: "There is nothing playing that I could skip for you"}});
         serverQueue.connection.dispatcher.end("[runCmd] Skip command has been used");
         return message.channel.send({embed: {color: "GREEN", description: "⏭️  **|**  I skipped the song for you"}});
 
-    } else if (command === "stop") {
+    } else if (command === "nc!stop") {
         if (!message.member.voice.channel) return message.channel.send({embed: {color: "RED", description: "I'm sorry but you need to be in a voice channel to play music!"}});
         if (!serverQueue) return message.channel.send({embed: {color: "RED", description: "There is nothing playing that I could stop for you"}});
         serverQueue.songs = [];
