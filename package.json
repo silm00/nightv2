@@ -11,6 +11,8 @@
 		"express": "^4.17.1",
 		"moment": "^2.27.0",
 		"simple-youtube-api": "^5.2.1",
-		"ytdl-core": "^3.2.2"
+		"ytdl-core": "^3.2.2",
+		"node": "^12.x"
+
 	}
 }
