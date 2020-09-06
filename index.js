@@ -14,7 +14,7 @@ require("./server.js");
 
 // this event will only trigger one time after logging in
 const PREFIX = "nc!" ;
-const youtube = new YouTube(AIzaSyCnKc8tQsHYLB0xeaA_nBHawWid1nXlocE);
+const youtube = new YouTube(process.env.YTAPI_KEY);
 const queue = new Map();
 
 
