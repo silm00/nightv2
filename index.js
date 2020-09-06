@@ -13,8 +13,8 @@ require("./server.js");
 
 
 // this event will only trigger one time after logging in
-const PREFIX = process.env.PREFIX;
-const youtube = new YouTube(process.env.YTAPI_KEY);
+const PREFIX = "nc!" ;
+const youtube = new YouTube(AIzaSyCnKc8tQsHYLB0xeaA_nBHawWid1nXlocE);
 const queue = new Map();
 
 
@@ -592,7 +592,7 @@ __**Command list**__
             .setFooter(`• Now Playing: ${serverQueue.songs[0].title}`);
         return message.channel.send(embedQueue);
 
-    } else if (command === "pause") {
+    } else if (command === "nc!pause") {
         if (serverQueue && serverQueue.playing) {
             serverQueue.playing = false;
             serverQueue.connection.dispatcher.pause();
@@ -607,7 +607,7 @@ __**Command list**__
             return message.channel.send({embed: {color: "GREEN", description: "▶  **|**  Resumed the music for you"}});
         }
         return message.channel.send({embed: {color: "RED", description: "There is nothing playing"}});
-    } else if (command === "loop") {
+    } else if (command === "nc!loop") {
         if (serverQueue) {
             serverQueue.loop = !serverQueue.loop;
             return message.channel.send({embed: {color: "GREEN", description: `🔁  **|**  Loop is **\`${serverQueue.loop === true ? "enabled" : "disabled"}\`**`}});
