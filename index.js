@@ -303,7 +303,7 @@ client.on('message', message => {
 
 //help
 client.on('message', message => {
-  if(message.content.startsWith('nc!help')){
+  if(message.content === nc!help ){
 
 const exampleEmbed = new Discord.MessageEmbed()
   .setColor('#0099ff')
