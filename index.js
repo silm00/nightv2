@@ -570,7 +570,7 @@ __**Command list**__
         serverQueue.connection.dispatcher.end("[runCmd] Stop command has been used");
         return message.channel.send({embed: {color: "GREEN", description: "⏹️  **|**  Deleting queues and leaving voice channel..."}});
 
-    } else if (command === "volume" || command === "vol") {
+    } else if (command === "nc!volume" || command === "vol") {
         if (!message.member.voice.channel) return message.channel.send({embed: {color: "RED", description: "I'm sorry, but you need to be in a voice channel to set a volume!"}});
         if (!serverQueue) return message.channel.send({embed: {color: "RED", description: "There is nothing playing"}});
         if (!args[1]) return message.channel.send({embed: {color: "BLUE", description: `The current volume is: **\`${serverQueue.volume}%\`**`}});
@@ -579,11 +579,11 @@ __**Command list**__
         serverQueue.connection.dispatcher.setVolume(args[1] / 100);
         return message.channel.send({embed: {color: "GREEN", description: `I set the volume to: **\`${args[1]}%\`**`}});
 
-    } else if (command === "nowplaying" || command === "np") {
+    } else if (command === "nc!nowplaying" || command === "np") {
         if (!serverQueue) return message.channel.send({embed: {color: "RED", description: "There is nothing playing"}});
         return message.channel.send({embed: {color: "BLUE", description: `🎶  **|**  Now Playing: **\`${serverQueue.songs[0].title}\`**`}});
 
-    } else if (command === "queue" || command === "q") {
+    } else if (command === "nc!queue" || command === "q") {
         if (!serverQueue) return message.channel.send({embed: {color: "RED", description: "There is nothing playing"}});
         let embedQueue = new MessageEmbed()
             .setColor("BLUE")
@@ -600,7 +600,7 @@ __**Command list**__
         }
         return message.channel.send({embed: {color: "RED", description: "There is nothing playing"}});
 
-    } else if (command === "resume") {
+    } else if (command === "nc!resume") {
         if (serverQueue && !serverQueue.playing) {
             serverQueue.playing = true;
             serverQueue.connection.dispatcher.resume();
