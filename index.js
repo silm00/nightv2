@@ -14,7 +14,7 @@ client.config = {
   prefix: "nc!"
 }
 
-
+const PREFIX = "nc!";
 //Loading Events
 fs.readdir(__dirname + "/events/", (err, files) => {
   if (err) return console.error(err);
@@ -37,12 +37,6 @@ fs.readdir("./commands/", (err, files) => {
     console.log("Loading Command: "+commandName)
   });
 });
-
-
-// this event will only trigger one time after logging in
-const PREFIX = "nc!" ;
-
-
 
 
 const activities_list = [
