@@ -1,21 +1,48 @@
-const Discord = require('discord.js');
-
-// create a new Discord client
-const client = new Discord.Client();
+require("dotenv").config();//Loading .env
 const fs = require("fs");
-const { Client, Util, MessageEmbed } = require('discord.js');
+const { Collection, Client } = require("discord.js");
+const { Util, MessageEmbed } = require('discord.js');
 const { Permissions } = require('discord.js');
 const moment = require('moment');
-const YouTube = require("simple-youtube-api");
-const ytdl = require("ytdl-core");
-require("dotenv").config();
+const Discord = require('discord.js');
 
+const client = new Client();//Making a discord bot client
+client.commands = new Collection();//Making client.commands as a Discord.js Collection
+client.queue = new Map()
+
+client.config = {
+  prefix: "nc!"
+}
+
+
+//Loading Events
+fs.readdir(__dirname + "/events/", (err, files) => {
+  if (err) return console.error(err);
+  files.forEach((file) => {
+    const event = require(__dirname + `/events/${file}`);
+    let eventName = file.split(".")[0];
+    client.on(eventName, event.bind(null, client));
+    console.log("Loading Event: "+eventName)
+  });
+});
+
+//Loading Commands
+fs.readdir("./commands/", (err, files) => {
+  if (err) return console.error(err);
+  files.forEach((file) => {
+    if (!file.endsWith(".js")) return;
+    let props = require(`./commands/${file}`);
+    let commandName = file.split(".")[0];
+    client.commands.set(commandName, props);
+    console.log("Loading Command: "+commandName)
+  });
+});
 
 
 // this event will only trigger one time after logging in
 const PREFIX = "nc!" ;
-const youtube = new YouTube(process.env.YTAPI_KEY);
-const queue = new Map();
+
+
 
 
 const activities_list = [
