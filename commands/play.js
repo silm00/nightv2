@@ -58,7 +58,7 @@ module.exports = {
       connection: null,
       songs: [],
       volume: 2,
-      
+      playing: true,
     };
     message.client.queue.set(message.guild.id, queueConstruct);
     queueConstruct.songs.push(song);
