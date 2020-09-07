@@ -680,7 +680,7 @@ function play(guild, song) {
 
 
 
-/*newmusic
+//newmusic
 fs.readdir(__dirname + "/events/", (err, files) => {
   if (err) return console.error(err);
   files.forEach((file) => {
@@ -703,7 +703,7 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-*/
+
 //NzMwMjcxODg0MTE3MTQ3NjQ4.XwVE0A.WqM0Owv_y-GqWCp06slkdIUxH0Q
 
 // login to Discord with your app's token
