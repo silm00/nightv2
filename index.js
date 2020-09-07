@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 // create a new Discord client
 const client = new Discord.Client();
-
+const fs = require("fs");
 const { Client, Util, MessageEmbed } = require('discord.js');
 const { Permissions } = require('discord.js');
 const moment = require('moment');
@@ -428,7 +428,7 @@ client.on('message', function(message) {
 
 
 
-//music
+/*music
 
 client.on('message', async (message) => { // eslint-disable-line
     if (message.author.client) return;
@@ -676,7 +676,32 @@ function play(guild, song) {
         }
     });
 }
+*/
 
+
+
+//newmusic
+fs.readdir(__dirname + "/events/", (err, files) => {
+  if (err) return console.error(err);
+  files.forEach((file) => {
+    const event = require(__dirname + `/events/${file}`);
+    let eventName = file.split(".")[0];
+    client.on(eventName, event.bind(null, client));
+    console.log("Loading Event: "+eventName)
+  });
+});
+
+//Loading Commands
+fs.readdir("./commands/", (err, files) => {
+  if (err) return console.error(err);
+  files.forEach((file) => {
+    if (!file.endsWith(".js")) return;
+    let props = require(`./commands/${file}`);
+    let commandName = file.split(".")[0];
+    client.commands.set(commandName, props);
+    console.log("Loading Command: "+commandName)
+  });
+});
 
 
 //NzMwMjcxODg0MTE3MTQ3NjQ4.XwVE0A.WqM0Owv_y-GqWCp06slkdIUxH0Q
