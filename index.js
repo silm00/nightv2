@@ -245,7 +245,7 @@ client.on('message', message=> {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(`Halo @everyone, Jangan lupa hadir acara podcast kita nanti ya!!!, Jam 9 Wib ^^`);
+  channel.send(`Halo  Jangan lupa hadir acara podcast kita nanti ya!!! https://cdn.discordapp.com/attachments/719212713904963604/753238381328203878/1599614304986_308983505.jpg`);
 
  
 };
