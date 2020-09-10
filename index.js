@@ -161,7 +161,8 @@ client.on('message', message => {
 
     }
      if (message.content === 'nc!serverinvite') {
-        message.channel.send('https://discord.gg/RYjVBMT');
+        message.channel.send('https://discord.gg/RYjVBMT')
+        message.delete();
 
     }
 
