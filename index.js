@@ -160,6 +160,10 @@ client.on('message', message => {
         message.channel.send('poksi punya nana');
 
     }
+     if (message.content === 'nc!serverinvite') {
+        message.channel.send('https://discord.gg/Sjm8Re');
+
+    }
 
     if (message.content === 'Poksi') {
         message.channel.send('poksi punya nana');
