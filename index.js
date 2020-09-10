@@ -161,7 +161,7 @@ client.on('message', message => {
 
     }
      if (message.content === 'nc!serverinvite') {
-        message.channel.send('https://discord.gg/Sjm8Re');
+        message.channel.send('https://discord.gg/RYjVBMT');
 
     }
 
@@ -333,7 +333,7 @@ client.on('message', message => {
 const exampleEmbed = new Discord.MessageEmbed()
   .setColor('#0099ff')
   .setTitle('Help Command')
-  .setDescription('You can use command,```nc!ping, nc!userinfo, nc!myavatar``` ')
+  .setDescription('You can use command,```nc!ping, nc!userinfo, nc!myavatar, nc!serverinfo, nc!serverinvite``` ')
   .setFooter('Bot Created By Foxie', 'https://media.discordapp.net/attachments/721013672431845489/722923521164050462/22-225874_coffee-logo-png-vector-cafe.png');
 
 message.reply(exampleEmbed);
